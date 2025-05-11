@@ -88,7 +88,8 @@ const HeroSection: React.FC = () => {
       }
 
       @media (max-width: 576px) {
-        height: 400px;
+        height: auto;
+        min-height: 450px;
       }
     `, // slideImage スタイルは SlideImageBackground コンポーネントに移動
     slideContent: css`
@@ -96,11 +97,20 @@ const HeroSection: React.FC = () => {
       z-index: 2;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 120px 16px 0;
+      padding: 120px 16px 60px;
       color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
 
       @media (max-width: 768px) {
         padding-top: 100px;
+        padding-bottom: 40px;
+      }
+      
+      @media (max-width: 576px) {
+        padding-top: 80px;
+        padding-bottom: 30px;
       }
     `,
     subtitle: css`
@@ -138,6 +148,7 @@ const HeroSection: React.FC = () => {
 
       @media (max-width: 576px) {
         font-size: 16px;
+        margin-bottom: 24px;
       }
     `,
     button: css`
