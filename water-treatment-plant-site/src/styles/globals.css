@@ -1,0 +1,80 @@
+/* 浄水プラント企業サイト用グローバルスタイル */
+
+/* 日本語のタイポグラフィ基本設定 */
+html, body {
+  font-family: "Noto Sans JP", "Hiragino Sans", "Meiryo", sans-serif;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.85);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFFFF;
+}
+
+/* 日本語見出しの最適化 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.8em;
+  letter-spacing: -0.01em;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* リンク設定 */
+a {
+  color: #0277BD;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #039BE5;
+}
+
+/* フォーカス状態の視認性向上（アクセシビリティ） */
+:focus {
+  outline: 2px solid #0277BD;
+  outline-offset: 2px;
+}
+
+/* セクションのコンテナスタイル */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* レスポンシブ設定 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+/* アクセシビリティヘルパークラス */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 印刷スタイル */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    color: #666;
+  }
+}
