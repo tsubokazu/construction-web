@@ -114,6 +114,10 @@ const Header = () => {
       margin-right: 48px;
       height: 100%;
       
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+      }
+      
       a {
         display: flex;
         align-items: center;
