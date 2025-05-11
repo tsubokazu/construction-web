@@ -113,6 +113,16 @@ const Header = () => {
       justify-content: center;
       margin-right: 48px;
       height: 100%;
+      
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      
+      img {
+        object-fit: contain;
+      }
     `,
     actions: css`
       display: flex;
