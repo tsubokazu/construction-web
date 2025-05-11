@@ -15,9 +15,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   // スタイルをオブジェクトとして定義
   const layoutStyle = {
     maxWidth: '100%',
-    overflowX: 'hidden',
+    overflow: 'hidden',
     minHeight: '100vh'
-  };
+  } as React.CSSProperties;
 
   return (
     <Layout style={layoutStyle}>
