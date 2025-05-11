@@ -106,6 +106,10 @@ const Header = () => {
       @media (max-width: 992px) {
         justify-content: space-between;
       }
+
+      @media (max-width: 768px) {
+        padding: 0 8px 0 8px;
+      }
     `,
     logo: css`
       display: flex;
@@ -113,17 +117,17 @@ const Header = () => {
       justify-content: center;
       margin-right: 48px;
       height: 100%;
-      
+
       @media (max-width: 768px) {
         justify-content: flex-start;
       }
-      
+
       a {
         display: flex;
         align-items: center;
         height: 100%;
       }
-      
+
       img {
         object-fit: contain;
       }
@@ -236,9 +240,12 @@ const Header = () => {
               <Image
                 src="/images/logo.svg"
                 alt="アクアテック株式会社"
-                width={160}
+                width={140}
                 height={40}
-                style={{ objectFit: 'contain' }}
+                style={{
+                  objectFit: "contain",
+                  marginLeft: "-4px",
+                }}
               />
             </Link>
           </div>
@@ -296,7 +303,7 @@ const Header = () => {
               alt="アクアテック株式会社"
               width={140}
               height={35}
-              style={{ objectFit: 'contain' }}
+              style={{ objectFit: "contain" }}
             />
           </div>
         }
